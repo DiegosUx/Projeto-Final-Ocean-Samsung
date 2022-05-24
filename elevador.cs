@@ -2,6 +2,8 @@
 {
     public class Elevador
     {
+        //Dados da classe do Elevador   
+          
         private int totalDeAndares = 3;
         private int andarAtual = 0;
         private int capacidade = 6;
@@ -16,6 +18,9 @@
             get { return totalDeAndares; }
             set { totalDeAndares = value; }
         }
+
+        //Como o mesmo deve se comportar após a inicalização
+
         public void Inicializa(int capacidade, int andares)
         {
             andarAtual = 0;
@@ -26,6 +31,9 @@
         {
             if (pessoasPresentes < capacidade)
             {
+             
+                //Ao acrescentar pessoas    
+
                 Console.WriteLine("Foi acrecentado uma pessoa");
                 this.pessoasPresentes = this.pessoasPresentes + 1;
                 return "O elevador tem " + pessoasPresentes + " pessoas";
@@ -39,6 +47,8 @@
         {
             if (pessoasPresentes != 0)
             {
+                //Ao sair pessoas 
+
                 Console.WriteLine("Uma pessoa saiu do elevador");
                 this.pessoasPresentes = this.pessoasPresentes - 1;
                 return "O elevador tem " + pessoasPresentes + " pessoas";
@@ -52,6 +62,8 @@
         {
             if (andarAtual < andares)
             {
+                //Controle de andares
+
                 Console.WriteLine("Você subiu um andar");
                 this.andarAtual = this.andarAtual + 1;
                 if (this.andarAtual == 0)
@@ -72,6 +84,8 @@
         {
             if (0 < andarAtual)
             {
+                //Finalização do programa
+
                 Console.WriteLine("Você desceu um andar");
                 this.andarAtual = this.andarAtual - 1;
                 if (this.andarAtual == 0)
